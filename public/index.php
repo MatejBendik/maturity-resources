@@ -23,6 +23,7 @@
                 </div>
                 <button type="submit">Sign in</button>
             </form>
+            <a class="signup" href="usr/signup_page.php">or Sign up</a>
         </div>
     </div>
 </body>
