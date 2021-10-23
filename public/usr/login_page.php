@@ -17,7 +17,7 @@
         <img class="img" src="../../src/img/login_background_1.jpg" alt="login">
         <div class="formular">
             <form action="login_page.php" method="post">
-                <h1>Sign In with your Nickname and Password</h1>
+                <h1>Login with your Nickname and Password</h1>
                 <div class="password">
                     <input type="text" name="Nickname" placeholder="Nickname" required>
                     <div class="password_input">

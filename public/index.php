@@ -1,3 +1,9 @@
+<?php 
+
+include "../src/utils/pwd_validation.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,9 +28,20 @@
                     <input type="password" name="password" placeholder="Password" required id="password"> 
                     <i class="far fa-eye" id="togglePassword" onclick="showHidePassword()"></i>
                 </div>
-                <button type="submit">Sign in</button>
+                <button name="submit" type="submit">Continue</button>
             </form>
-           <!--  <a class="signup" href="usr/signup_page.php">or Sign up</a> -->
+        <!--  <a class="signup" href="usr/signup_page.php">or Sign up</a> -->
+                <?php
+                    
+                    if(isset($_POST["submit"])){
+                        $userInput = $_POST['password'];
+                        if($userInput == $password[0]){
+                            header("location: usr/login_page.php");
+                        }else{
+                            header("location: /maturity-resources/public/index.php?error=wrongPassword");
+                        }
+                    } 
+                ?>
         </div>
     </div>
 
