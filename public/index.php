@@ -19,13 +19,16 @@
             <form action="index.php" method="post">
                 <h1>Login into well of knowledge</h1>
                 <div class="password">
-                    <input type="password" name="password" placeholder="Password" required> <i class="far fa-eye" id="togglePassword"></i>
+                    <input type="password" name="password" placeholder="Password" required id="password"> 
+                    <i class="far fa-eye" id="togglePassword" onclick="showHidePassword()"></i>
                 </div>
                 <button type="submit">Sign in</button>
             </form>
-            <a class="signup" href="usr/signup_page.php">or Sign up</a>
+           <!--  <a class="signup" href="usr/signup_page.php">or Sign up</a> -->
         </div>
     </div>
+
+    <script src="../src/js/script.js?<?php echo time(); ?>"></script>
 </body>
 
 </html>
