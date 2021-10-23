@@ -13,7 +13,7 @@
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    filter: brightness(70%);
+    filter: brightness(60%);
     position: absolute;
     z-index: 0;
 }
@@ -39,7 +39,7 @@ form h1 {
     margin-bottom: 2.5rem;
 }
 
-.password {
+.password_input {
     display: flex;
 }
 
@@ -67,13 +67,26 @@ form h1 {
     opacity: 1;
 }
 
+.remember_me {
+    display: flex;
+}
+
+.remember_me label {
+    color: white;
+    margin: 15px 0 0 15px;
+}
+
+#rememberMe {
+    width: 15px;
+}
+
 i {
     cursor: pointer;
-    margin: 16px 15px 0 -35px;
+    margin: 16px 0px 0 -35px;
 }
 
 button {
-    width: 100%;
+    width: 105%;
     padding: 1rem;
     border-radius: 80px;
     border: none;
