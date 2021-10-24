@@ -1,3 +1,9 @@
+<?php
+
+include "../../src/utils/user_validation.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Maturita 2021</title>
 
-    <link rel="stylesheet" href="../../src/css/login.css">
+    <link rel="stylesheet" href="../../src/css/login.css?<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 </head>
@@ -19,7 +25,7 @@
             <form action="login_page.php" method="post">
                 <h1>Login with your Nickname and Password</h1>
                 <div class="password">
-                    <input type="text" name="Nickname" placeholder="Nickname" required>
+                    <input type="text" name="nickname" placeholder="Nickname" required>
                     <div class="password_input">
                         <input type="password" name="password" placeholder="Password" required id="password">
                         <i class="far fa-eye" id="togglePassword" onclick="showHidePassword()"></i>
@@ -28,9 +34,25 @@
                         <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
                     </div>
                 </div>
-                <button type="submit">Login</button>
+                <button name="submit" type="submit">Login</button>
             </form>
-            <!--  <a class="signup" href="usr/signup_page.php">or Sign up</a> -->
+            <?php
+
+            if (isset($_POST["submit"])) {
+                $userNickName = $_POST['nickname'];
+                $userPassword = $_POST['password'];
+
+                if ($userNickName == $nickname[0] && $userPassword == $password[0]) {
+                    header("location: main/main_page.php");
+                } else {
+                    /* header("location: /maturity-resources/public/index.php?error=wrongPassword"); */
+                    echo "<p class='warning' style='color:white; text-align:center; font-size: 1rem; background-color: rgba(165, 161, 161, 0.65); border-radius: 60px; padding: 8px; width: 300px; margin-left: 7%; margin-bottom:40px;'> User with this password doens't exist ! </p>";
+                }
+            }
+            ?>
+
+            <p class="notice">Not registered yet ?</p><br>
+            <a class="register" href="signup_page.php">Create an Account</a>
         </div>
     </div>
 

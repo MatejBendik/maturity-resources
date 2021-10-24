@@ -38,7 +38,8 @@ include "../src/utils/pwd_validation.php";
                         if($userInput == $password[0]){
                             header("location: usr/login_page.php");
                         }else{
-                            header("location: /maturity-resources/public/index.php?error=wrongPassword");
+                            /* header("location: /maturity-resources/public/index.php?error=wrongPassword"); */
+                            echo "<p class='warning' style='color:white; text-align:center; font-size: 1rem; background-color: rgba(165, 161, 161, 0.65); border-radius: 60px; padding: 5px 0 5px 0; width: 250px; margin-left: 15%; '> Wrong password ! </p>";
                         }
                     } 
                 ?>
