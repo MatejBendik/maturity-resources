@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Maturita 2021</title>
 
-    <link rel="stylesheet" href="../../src/css/login.css">
+    <link rel="stylesheet" href="../../src/css/login.css?<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 </head>
@@ -30,7 +30,8 @@
                 </div>
                 <button type="submit">Login</button>
             </form>
-            <!--  <a class="signup" href="usr/signup_page.php">or Sign up</a> -->
+            <p class="notice">Not registered yet ?</p><br>
+             <a class="register" href="signup_page.php">Create an Account</a>
         </div>
     </div>
 
