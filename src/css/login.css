@@ -24,7 +24,7 @@
 
 .formular {
     margin: 0 auto 0 auto;
-    padding-top: 10%;
+    padding-top: 8%;
     width: 22rem;
     position: relative;
 }
@@ -132,6 +132,9 @@ button:hover {
         position: relative;
     }
     .register {
-        margin-left: 30%;
+        margin-left: 22%;
+    }
+    .notice {
+        padding-left: 40%;
     }
 }
