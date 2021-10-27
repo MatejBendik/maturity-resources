@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,10 +17,10 @@
     <div class="main">
         <img class="img" src="../../src/img/login_background_1.jpg" alt="login">
         <div class="formular">
-            <form action="signup_page.php" method="post">
+            <form action="../../src/utils/register_validation.php" method="post">
                 <h1>Registration to our page</h1>
                 <div class="password">
-                    <input type="text" name="firstame" placeholder="First name" required>
+                    <input type="text" name="firstname" placeholder="First name" required>
                     <input type="text" name="lastname" placeholder="Last name" required>
                     <input type="text" name="nickname" placeholder="Nickname" required>
                     <input type="email" name="email" placeholder="Email" required>
@@ -28,13 +29,32 @@
                         <i class="far fa-eye" id="togglePassword" onclick="showHidePassword1()"></i> 
                     </div>
                     <div class="password_input">
-                        <input type="password" name="password" placeholder="Repeat your password" required id="password2" >
+                        <input type="password" name="passwordRepeat" placeholder="Repeat your password" required id="password2" >
                         <i class="far fa-eye" id="togglePassword" onclick="showHidePassword2()"></i> 
                     </div>
                   
                 </div>
-                <button type="submit">Register</button>
+                <button type="submit" name="submit">Register</button>
             </form>
+            <?php 
+            
+            // $_GET preto lebo tu bereme data z url ktore mozeme vidiet, a nas zaujima error message
+            if(isset($_GET["error"])){
+                if(!empty($_GET["error" == "invalidNickname"])){
+                    echo "<p class='warning' style='color:white; text-align:center; font-size: 1rem; background-color: rgba(165, 161, 161, 0.65); border-radius: 60px; padding: 8px; width: 300px; margin-left: 7%; margin-bottom:40px; margin-top:30px;'> Your name contains forbidden characters ! </p>";
+                }elseif($_GET["error"] == "passwordsDontMatch"){
+                    echo "<p class='warning' style='color:white; text-align:center; font-size: 1rem; background-color: rgba(165, 161, 161, 0.65); border-radius: 60px; padding: 8px; width: 300px; margin-left: 7%; margin-bottom:40px; margin-top:30px;'> Your passwords dont match ! </p>";
+                }elseif($_GET["error"] == "nicknameTaken"){
+                    echo "<p class='warning' style='color:white; text-align:center; font-size: 1rem; background-color: rgba(165, 161, 161, 0.65); border-radius: 60px; padding: 8px; width: 300px; margin-left: 7%; margin-bottom:40px; margin-top:30px;'> The nickname is already taken ! </p>";
+                } elseif($_GET["error"] == "stmtFailed"){
+                    echo "<p class='warning' style='color:white; text-align:center; font-size: 1rem; background-color: rgba(165, 161, 161, 0.65); border-radius: 60px; padding: 8px; width: 300px; margin-left: 7%; margin-bottom:40px; margin-top:30px;'> Something went wrong ! </p>"; 
+                } elseif($_GET["error"] == "none"){
+                    echo "<p class='warning' style='color:white; text-align:center; font-size: 1rem; background-color: rgba(165, 161, 161, 0.65); border-radius: 60px; padding: 8px; width: 300px; margin-left: 7%; margin-bottom:40px; margin-top:30px;'> Congratulations you registered correctly ! </p>"; 
+                }
+            }
+            
+            
+            ?>
         </div>
     </div>
 
