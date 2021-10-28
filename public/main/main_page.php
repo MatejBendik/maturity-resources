@@ -55,24 +55,21 @@ include "../content/header.php";
             </div>
 
             <div class="text-card">
-                <a href=""> <img class="threeimg" style="height: 350px;width: 400px;" src="../../src/img/IDSLOGO.jpg" alt="slovenskyJazyk"></a>
+                <a href=""> <img class="threeimg" style="height: 350px;width: 400px;" src="../../src/img/IDSLOGO.jpg" alt="informacnedatabsys"></a>
             </div>
             <div class="text-card">
-                <a href=""> <img class="threeimg" style="height: 350px;width: 400px;" src="../../src/img/SSTLOGO.jpg" alt="tvorbaWwwStranok"></a>            
+                <a href=""> <img class="threeimg" style="height: 350px;width: 400px;" src="../../src/img/SSTLOGO.jpg" alt="sietoveserverotech"></a>            
             </div>
         </div>
     </div>
 </section>
     
 
+<?php 
 
-<footer>
-    
-</footer>
-<div class="bottom-line"></div>
+include "../content/footer.php";
 
-
-
+?>
 
 
 

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration - Maturita 2021</title>
 
-    <link rel="stylesheet" href="../../src/css/signup.css">
+    <link rel="stylesheet" href="../../src/css/signup.css?<?php echo time();?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 </head>
@@ -17,8 +17,11 @@
     <div class="main">
         <img class="img" src="../../src/img/login_background_1.jpg" alt="login">
         <div class="formular">
+            
             <form action="../../src/utils/register_validation.php" method="post">
-                <h1>Registration to our page</h1>
+                
+                <h1><a class="back_link" href="login_page.php" style="text-decoration: none;"><div style="height:25px; width:25px; margin-bottom:10px;text-align :center; color:rgb(255,255,255); font-size:22px; border-radius:100%; background-color:transparent; border:2px solid #fff ">X</div></a>Registration to our page</h1>
+               
                 <div class="password">
                     <input type="text" name="firstname" placeholder="First name" required>
                     <input type="text" name="lastname" placeholder="Last name" required>

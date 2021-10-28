@@ -3,7 +3,9 @@
     padding: 0;
     letter-spacing: 0.075em;
 }
-
+body{
+    background-color: #dfad93;
+}
 .main {
     height: 100vh;
 }
@@ -138,3 +140,15 @@ button:hover {
         padding-left: 40%;
     }
 }
+
+@keyframes opaAni {
+    0% {
+      opacity: 20%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  .main{
+    animation: 2s linear opaAni;
+  }
