@@ -7,6 +7,9 @@
 .main {
     height: 100vh;
 }
+body{
+    background-color: #dfad93;
+}
 
 .img {
     display: block;
@@ -98,3 +101,18 @@ button:hover {
         margin-left: 30%;
     } */
 }
+.back_link:hover{
+    transform: scale(0.5);
+    transition-duration: 1.0s;
+}
+@keyframes opaAni {
+    0% {
+      opacity: 20%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  .main{
+    animation: 3s linear opaAni;
+  }
